@@ -21,7 +21,7 @@ from optimization import AdamWeightDecay, WarmUp
 # from bert import bert_tokenization
 # from bert_tokenization import FullTokenizer
 import bert_tokenizer as tokenization
-import tokenization.tokenizer.FullTokenizer
+from tokenization import FullTokenizer
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
