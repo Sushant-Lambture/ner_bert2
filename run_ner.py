@@ -322,9 +322,9 @@ def main():
     if args.multi_gpu:
         if len(args.gpus.split(',')) == 1:
             strategy = tf.distribute.MirroredStrategy()
-        else:
-            gpus = [f"/gpu:{gpu}" for gpu in args.gpus.split(',')]
-            strategy = tf.distribute.MirroredStrategy(devices=gpus)
+#         else:
+#             gpus = [f"/gpu:{gpu}" for gpu in args.gpus.split(',')]
+#             strategy = tf.distribute.MirroredStrategy(devices=gpus)
     else:
         gpu = args.gpus.split(',')[0]
         strategy = tf.distribute.OneDeviceStrategy(device=f"/gpu:{gpu}")
