@@ -421,7 +421,7 @@ def main():
                 for (input_ids, input_mask, segment_ids, valid_ids, label_ids,label_mask) in progress_bar(dist_dataset, total=pb_max_len, parent=epoch_bar):
                     loss = train_step(input_ids, input_mask, segment_ids, valid_ids, label_ids,label_mask)
                     loss_metric(loss)
-                    epoch_bar.child.comment = f'loss : {loss_metric.result()}'
+                    epoch_bar.child.comment = (f'loss : {loss_metric.result()}')
             loss_metric.reset_states()
 
         # model weight save
