@@ -18,7 +18,7 @@ from seqeval.metrics import classification_report
 from model import BertNer
 from optimization import AdamWeightDecay, WarmUp
 from bert import bert_tokenization
-from bert_tokenization import FullTokenizer
+# from bert_tokenization import FullTokenizer
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
@@ -318,7 +318,7 @@ def main():
         os.makedirs(args.output_dir)
 
     if args.do_train:
-        tokenizer = FullTokenizer(os.path.join(args.bert_model, "vocab.txt"), args.do_lower_case)
+        tokenizer = tokenization.FullTokenizer(os.path.join(args.bert_model, "vocab.txt"), args.do_lower_case)
 
 #     if args.multi_gpu:
 #         if len(args.gpus.split(',')) == 1:
