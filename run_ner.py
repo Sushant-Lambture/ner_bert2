@@ -17,7 +17,7 @@ from seqeval.metrics import classification_report
 
 from model import BertNer
 from optimization import AdamWeightDecay, WarmUp
-from bert import tokenization
+# from bert import tokenization
 # from bert import bert_tokenization
 # from bert_tokenization import FullTokenizer
 import bert_tokenizer as tokenization
