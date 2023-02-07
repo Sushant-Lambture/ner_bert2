@@ -18,6 +18,9 @@ from seqeval.metrics import classification_report
 from model import BertNer
 from optimization import AdamWeightDecay, WarmUp
 
+from bert import tokenization  
+from bert.tokenization.bert_tokenization import FullTokenizer
+
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
