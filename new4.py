@@ -136,7 +136,7 @@ class NERBertModel(nn.Module):
 
 ## DATA PREPROCESSING
 #Load File
-data = pd.read_csv(r"/home/sushant/env/files/final.csv", encoding="latin-1")
+data = pd.read_csv(r"final.csv", encoding="latin-1")
 
 print(data.head())
 
